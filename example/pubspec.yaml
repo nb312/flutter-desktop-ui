@@ -1,41 +1,89 @@
 name: example_flutter
 description: An example project for flutter-desktop-embedding.
 
-version: 0.1.0
+version: 1.0.0+1
 
 environment:
-  sdk: '>=2.0.0 <3.0.0'
-  # The example interacts with build scripts on the Flutter side that are not
-  # yet stable, so it requires a very recent version of Flutter.
-  # This version will increase regularly as the build scripts change.
-  flutter: '>=1.10.2-pre.54'
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^0.1.0
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  font_awesome_flutter: ^8.5.0
+  smooth_star_rating: ^1.0.3
+  intl: ^0.16.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
 flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
   uses-material-design: true
 
-  # See https://github.com/flutter/flutter/wiki/Desktop-shells#fonts
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/design_course/
+    - assets/fitness_app/
+    - assets/hotel/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
   fonts:
+    - family: WorkSans
+      fonts:
+        - asset: assets/fonts/WorkSans-Regular.ttf
+        - asset: assets/fonts/WorkSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/WorkSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/WorkSans-Bold.ttf
+          weight: 700
     - family: Roboto
       fonts:
-        - asset: fonts/Roboto/Roboto-Thin.ttf
-          weight: 100
-        - asset: fonts/Roboto/Roboto-Light.ttf
-          weight: 300
-        - asset: fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
           weight: 400
-        - asset: fonts/Roboto/Roboto-Medium.ttf
-          weight: 500
-        - asset: fonts/Roboto/Roboto-Bold.ttf
-          weight: 700
-        - asset: fonts/Roboto/Roboto-Black.ttf
-          weight: 900
+    - family: Roboto
+      fonts:
+          - asset: fonts/Roboto/Roboto-Thin.ttf
+            weight: 100
+          - asset: fonts/Roboto/Roboto-Light.ttf
+            weight: 300
+          - asset: fonts/Roboto/Roboto-Regular.ttf
+            weight: 400
+          - asset: fonts/Roboto/Roboto-Medium.ttf
+            weight: 500
+          - asset: fonts/Roboto/Roboto-Bold.ttf
+            weight: 700
+          - asset: fonts/Roboto/Roboto-Black.ttf
+            weight: 900
+
+    #
+    # For details regarding fonts from package dependencies,
+    # see https://flutter.dev/custom-fonts/#from-packages
+
+    # See https://github.com/flutter/flutter/wiki/Desktop-shells#fonts
